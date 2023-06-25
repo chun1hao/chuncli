@@ -1,0 +1,10 @@
+{
+  "react": {
+    "github": "https://github.com/chun1hao/react-template.git",
+    "download": "github:chun1hao/react-template"
+  },
+  "vue": {
+    "github": "https://github.com/chun1hao/vuejs-admin-dashboard-template.git",
+    "download": "github:chun1hao/vuejs-admin-dashboard-template"
+  }
+}
