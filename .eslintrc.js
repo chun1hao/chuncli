@@ -13,4 +13,4 @@ module.exports = {
   rules: {
     'no-useless-return': 0
   }
-};
+}
