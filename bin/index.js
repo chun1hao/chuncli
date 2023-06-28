@@ -9,8 +9,19 @@ const checkNodeVersion = require('../lib/utils/checkNodeVesion')
 const enhanceErrorMessage = require('../lib/utils/enhanceErrorMessage')
 const log = require('../lib/utils/log')
 const { suggestCommands } = require('../lib/utils/index')
+
+checkDebug()
+
 const create = require('../lib/create/create')
 const start = require('../lib/start/startServe')
+
+function checkDebug() {
+  if (process.argv.includes('-d') || process.argv.includes('--debug')) {
+    process.env.LOG_LEVEL = 'verbose'
+  } else {
+    process.env.LOG_LEVEL = 'info'
+  }
+}
 
 ;(async () => {
   try {
