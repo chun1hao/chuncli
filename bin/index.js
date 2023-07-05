@@ -16,7 +16,7 @@ const create = require('../lib/create/create')
 const start = require('../lib/start/startServe')
 
 function checkDebug() {
-  if (process.argv.includes('-d') || process.argv.includes('--debug')) {
+  if (process.argv.includes('-D') || process.argv.includes('--debug')) {
     process.env.LOG_LEVEL = 'verbose'
   } else {
     process.env.LOG_LEVEL = 'info'
@@ -35,21 +35,23 @@ function checkDebug() {
     program
       .name('chbuild')
       .description('一个脚手架')
-      .version(pk.version, '-v, --version')
+      .version(pk.version, '-V, --version')
 
     program
       .command('create')
       .description('创建一个模版项目')
       .argument('<templateName>', '模版类型')
       .argument('<projectName>', '项目名称')
-      .option('-f, --force', '存在同名文件夹强制覆盖')
+      .option('-F, --force', '存在同名文件夹强制覆盖')
       .action(create)
 
     program
       .command('start')
       .description('启动服务')
-      .option('-c, --config <config>', '自定义配置文件')
-      .option('-p, --port <port>', '端口号')
+      .option('-D, --debug', '开启debug模式')
+      .option('-C, --config <config>', '自定义配置文件')
+      .option('-P, --port <port>', '端口号')
+      .option('-T, --type <startType>', '运行项目类型')
       .action(start)
 
     // 非法命令处理

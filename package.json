@@ -38,6 +38,7 @@
     "html-webpack-plugin": "^5.5.3",
     "husky": "^8.0.0",
     "inquirer": "^8.2.5",
+    "interpolate-html-plugin": "^4.0.0",
     "lint-staged": "^13.2.2",
     "npmlog": "^7.0.1",
     "ora": "^5.4.1",
