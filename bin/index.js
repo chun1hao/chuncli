@@ -14,6 +14,7 @@ checkDebug()
 
 const create = require('../lib/create/create')
 const start = require('../lib/start/startServe')
+const build = require('../lib/build/build')
 
 function checkDebug() {
   if (process.argv.includes('-D') || process.argv.includes('--debug')) {
@@ -53,6 +54,13 @@ function checkDebug() {
       .option('-P, --port <port>', '端口号')
       .option('-T, --type <startType>', '运行项目类型')
       .action(start)
+
+    program
+      .command('build')
+      .description('打包')
+      .option('-C, --config <config>', '自定义配置文件')
+      .option('-T, --type <startType>', '打包项目类型')
+      .action(build)
 
     // 非法命令处理
     program.arguments('<command>').action((cmd) => {

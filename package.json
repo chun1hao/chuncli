@@ -1,6 +1,6 @@
 {
   "name": "chuncli",
-  "version": "2.0.0",
+  "version": "1.2.0",
   "description": "a tool",
   "main": "index.js",
   "scripts": {
