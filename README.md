@@ -122,7 +122,7 @@ merge(当前启动类型的基础配置, 配置文件中传入的配置, 插件�
 ### build 项目打包
 
 ```js
-chcli create [options]
+chcli build [options]
 ```
 
 #### options 可选项:
